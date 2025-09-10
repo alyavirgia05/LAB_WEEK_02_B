@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.Button
 
 class ResultActivity : AppCompatActivity() {
     companion object {
@@ -36,6 +37,9 @@ class ResultActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.color_code_result_message)
             resultMessage.text = getString(R.string.color_code_result_message,
                 colorCode?.uppercase())
+        }
+        findViewById<Button>(R.id.button_back).setOnClickListener {
+            finish()
         }
     }
 }

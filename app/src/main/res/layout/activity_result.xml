@@ -7,12 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".ResultActivity"
     android:id="@+id/background_screen">
+
     <TextView
         android:id="@+id/color_code_result_message"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         style="@style/text_display"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:padding="12dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/color_code_result_message"
+        android:layout_marginTop="16dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
